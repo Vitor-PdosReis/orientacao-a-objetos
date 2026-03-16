@@ -1,1 +1,5 @@
-/semana-2.1/Exercicio08/target/
+target/
+*.class
+*.jar
+*.log
+*.tmp
