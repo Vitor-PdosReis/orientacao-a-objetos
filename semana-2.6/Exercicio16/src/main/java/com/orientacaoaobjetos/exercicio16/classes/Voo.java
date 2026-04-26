@@ -25,13 +25,13 @@ public class Voo {
     private GerenciadorDeEscala escalas;
     private String estado;
 
-    public Voo(int numero, String destino, int capacidade, String estado) {
+    public Voo(int numero, String destino, int capacidade) {
         this.numero = numero;
         this.destino = destino;
         this.capacidade = capacidade;
         this.passageiros = new GerenciadorDePassageiro();
         this.escalas = new GerenciadorDeEscala();
-        this.estado = estado;
+        this.estado = "";
     }
     public Voo(){
         this.numero = -1;
@@ -45,7 +45,7 @@ public class Voo {
         this.estado = state;
     }
     public boolean abaixoCapMin(){
-        if(passageiros.getTotalPassageiros() < (capacidade/2)){
+        if(passageiros.getTotalPassageiros() < 5){
             return true;
         } else {
             return false;
@@ -96,6 +96,12 @@ public class Voo {
     }
     public void removePassageiro(String CPF){
         passageiros.remove(CPF);
+    }
+    public void addEscala(String escala){
+        escalas.add(escala);
+    }
+    public void removeEscala(String escala){
+        escalas.remove(escala);
     }
     public int getNumero() {
         return numero;
