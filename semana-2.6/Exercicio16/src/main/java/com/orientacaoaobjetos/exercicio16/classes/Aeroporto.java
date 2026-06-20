@@ -25,6 +25,9 @@ public class Aeroporto {
         this.localizacao = "";
         voos = new GerenciadorDeVoo();
     }
+    public void calculaVooComPrejuizo(){
+        voos.verifPrejuizo();
+    }
     public void addVoo(Voo voo){
         voos.add(voo);
     }
